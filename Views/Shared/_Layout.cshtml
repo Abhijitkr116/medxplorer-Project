@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@*@popperjs*@/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="header sticky-top bg-light bg-opacity-75">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                @Html.ActionLink("MedXplorer", "Index", "Main", new { area = "" }, new { @class = "navbar-brand fw-bold text-success" })
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul id="nav-ul" class="navbar-nav mb-2 mb-lg-0  justify-content-center ml-5">
+                        <li>@Html.ActionLink("Home", "Index", "Main", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Find Doctor", "Search", "Main", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Hospitals & Clinics", "Hospitals_clinics", "Main", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Medicines", "Medicines", "Main", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Services", "Service", "Main", new { area = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+                    <div class="col-2 d-flex justify-content-end gap-3 collapse navbar-collapse d-sm-flex spinner-grow-sm">
+                        @Html.ActionLink("Login / Signup", "Login", "Main", new { area = "" }, new { @class = "btn logbtn btn-outline btn-outline-success" })
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="footer mb-3 bg-success bg-opacity-25 d-flex justify-content-between align-items-top">
+                <div class="foot foot-1">
+                    @Html.ActionLink("MedXplorer", "Index", "Main", new { area = "" }, new { @class = "navbar-brand fw-bold text-success foot-logo" })
+                    <p class="logo-content text-center">We also provide educational resources and wellness tips to empower you with the knowledge you need for a healthier life.</p>
+                </div>
+                <div class="foot foot-2 d-flex justify-content-top align-items-center flex-column">
+                    <h3>Social links</h3>
+                    <div class="social-links w-75 d-flex justify-content-between align-items-center">
+                        <a href="#" class="ri-twitter-x-fill"></a>
+                        <a href="#" class="ri-facebook-fill"></a>
+                        <a href="#" class="ri-linkedin-fill"></a>
+                        <a href="#" class="ri-instagram-fill"></a>
+                    </div>
+                </div>
+                <div class="foot foot-3 d-flex flex-column align-items-center">
+                    <p class="footp">Subscribe for newsletter or future updates.</p>
+                    <form class="gap-2 w-100 d-flex">
+                        <input class="email-input" type="email" placeholder="example@gmail.com" value=""/>
+                        <input class="btn btn-primary email-submit" type="submit" value="submit"/>
+                    </form>
+                </div>
+                <div class="foot foot-4">
+                    <h3 class="mb-4">Page links</h3>
+                    @Html.ActionLink("Home", "Index", "Main", new { area = "" }, new { @class = "nav-link foot-page-links" })
+                    @Html.ActionLink("Find Doctor", "Find_doctor", "Main", new { area = "" }, new { @class = "nav-link foot-page-links" })
+                    @Html.ActionLink("Hospitals & Clinics", "Hospitals_clinics", "Main", new { area = "" }, new { @class = "nav-link foot-page-links" })
+                    @Html.ActionLink("Medicines", "Medicines", "Main", new { area = "" }, new { @class = "nav-link" })
+                    @Html.ActionLink("Services", "Service", "Main", new { area = "" }, new { @class = "nav-link foot-page-links" })
+                </div>
+            </div>
+            <p class="text-md-center">&copy; @DateTime.Now.Year - Copyright reserved <span class="text-success fw-bold">MedXplorer</span></p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+<style>
+    *{
+        font-family: 'poppins';
+    }
+    
+    #nav-ul{
+        width: 80%;
+        font-weight: 500;
+        padding-left: 1rem;
+    }
+    .logbtn{
+/*        width: 7rem;*/
+        /*padding: 0.4rem 1.2rem;*/
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+    .navbar{
+        border-bottom: 1px solid black;
+    }
+    .foot {
+        width: 22%;
+        /*border: 1px solid black;*/
+        padding: 2% 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #605E5E;
+    }
+    .foot-logo{
+        font-size: 2.1vw;
+    }
+    .foot h3{
+        font-size: 1.5vw;
+    }
+    .footp{
+        font-size: 1.1vw;
+    }
+    .logo-content{
+        font-size: 0.8vw;
+        margin-top: 1.5vw;
+    }
+    .social-links a {
+        text-decoration: none;
+        color: #0B5ED7;
+        font-size: 1.5vw;
+        display: flex;
+        justify-content: space-around;
+        transition: 0.2s ease;
+    }
+    .social-links a:hover{
+        scale: 1.2;
+        color: darkblue;
+    }
+    .foot-page-links {
+        color: #0B5ED7;
+        text-decoration: underline;
+        transition: 0.6s ease;
+        font-size: 1.1vw;
+    }
+    .foot-page-links:hover {
+        text-decoration: none;
+        color: blue;
+    }
+    .email-input{
+        font-size: 0.7vw;
+        width: 10vw;
+        padding: 1% 2%;
+    }
+    .email-submit {
+        font-size: 0.7vw;
+    }
+</style>
+</html>

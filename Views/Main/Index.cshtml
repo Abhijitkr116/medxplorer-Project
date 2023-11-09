@@ -1,0 +1,448 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <div class="Dashboard mt-md-5">
+        <div class="main1 ma-1 d-flex">
+            <div class="content1 w-50 pt-5">
+                <div class="cont cont-h2 d-flex align-items-end justify-content-center"><p class="space"> </p><h2>Find the best doctors in your locations.</h2></div>
+
+                <div class="cont cont-p-a d-flex flex-column justify-content-top align-items-center pt-2">
+                    <p class="text-center">Finding a doctor become very easy with MedXplorer.</p>
+                    @Html.ActionLink("Search", "Find_doctor", "Main", new { area = "" }, new { @class = "btn logbtn btn-success btn-lg" })
+                </div>
+
+            </div>
+            <div class="image w-50 d-flex justify-content-center ">
+                <div class="img">
+                    <img src="https://img.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg" />
+                </div>
+            </div>
+        </div>
+
+        <div class="main1 ma-2  d-flex">
+            <div class="content1 w-50 pt-5">
+                <div class="cont cont-h2 d-flex align-items-end justify-content-center"><p class="space"> </p><h2>Fix your appointment with doctor now.</h2></div>
+
+                <div class="cont cont-p-a d-flex flex-column justify-content-top align-items-center pt-2">
+                    <p class="text-center">Now you can easily book an appointment in MedXplorer.</p>
+                    @Html.ActionLink("Book an Appointment", "Appointment", "Main", new { area = "" }, new { @class = "btn logbtn btn-primary btn-lg" })
+                </div>
+
+            </div>
+            <div class="image w-50 d-flex justify-content-center ">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/5998443/pexels-photo-5998443.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                </div>
+            </div>
+        </div>
+
+        <div class="main1 ma-3 d-flex">
+            <div class="content1 w-50 pt-5">
+                <div class="cont cont-h2 d-flex align-items-end justify-content-center"><p class="space"> </p><h2>Check the best hospitals and clinics in your location.</h2></div>
+
+                <div class="cont cont-p-a d-flex flex-column justify-content-top align-items-center pt-2">
+                    <p class="text-center">Finding the hospitals and clinics become very easy with MedXplorer</p>
+                    @Html.ActionLink("Check", "Hospitals_clinics", "Main", new { area = "" }, new { @class = "btn logbtn btn-success btn-lg" })
+                </div>
+
+            </div>
+            <div class="image w-50 d-flex justify-content-center ">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                </div>
+            </div>
+        </div>
+
+        <div class="main1 ma-4 d-flex">
+            <div class="content1 w-50 pt-5">
+                <div class="cont cont-h2 d-flex align-items-end justify-content-center"><p class="space"> </p><h2>Find the doctor prescribed medicine.</h2></div>
+
+                <div class="cont cont-p-a d-flex flex-column justify-content-top align-items-center pt-2">
+                    <p class="text-center">
+                        Medicines are prescribed by top doctors
+                    </p>
+                    @Html.ActionLink("Search", "Medicines", "Main", new { area = "" }, new { @class = "btn logbtn btn-success btn-lg" })
+                </div>
+
+            </div>
+            <div class="image w-50 d-flex justify-content-center ">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Doctor-cards">
+        <h1 class="text-center p-3 doctor-head">Top doctors in Hazaribagh</h1>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                    <div class="cards d-flex justify-content-between gap-3">
+                        <div class="card card-1 w-auto d-flex justify-content-between align-items-center">
+                            <div class="profile-doc">
+                                <img src="https://img.freepik.com/free-vector/hand-drawn-doctor-cartoon-illustration_23-2150696182.jpg?t=st=1698954224~exp=1698954824~hmac=d6985238b5235b3c43c051de671cd649ec9dd3e57a8865861daf6c98d5d8e8c9" />
+                            </div>
+                            <h3>Dr. Vikash Kumar (MBBS)</h3>
+                            <h3>CardioLogist</h3>
+                            <p>Korrah road, Matwari, Hazaribagh</p>
+                        </div>
+                        <div class="card card-1 w-auto d-flex justify-content-between align-items-center">
+                            <div class="profile-doc">
+                                <img src="https://img.freepik.com/premium-vector/nice-good-looking-young-lady-doctor-cartoon-vector-illustration_825692-145.jpg?w=740" />
+                            </div>
+                            <h3>Dr. Sneha Sinha (MBBS)</h3>
+                            <h3 class="m">Dermatologists</h3>
+                            <p>Korrah road, Matwari, Hazaribagh</p>
+                        </div>
+                        <div class="card card-1 w-auto d-flex justify-content-between align-items-center">
+                            <div class="profile-doc">
+                                <img src="https://img.freepik.com/free-vector/hand-drawn-doctor-cartoon-illustration_23-2150696179.jpg?size=626&ext=jpg&ga=GA1.1.128012166.1689853347&semt=ais" />
+                            </div>
+                            <h3>Dr. Manoj Singh (MBBS)</h3>
+                            <h3>General Physicist</h3>
+                            <p>Jhanda chowk, Hazaribagh</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+
+                    <div class="cards d-flex justify-content-between gap-3">
+                        <div class="card card-1 w-auto d-flex justify-content-between align-items-center">
+                            <div class="profile-doc">
+                                <img src="https://img.freepik.com/free-vector/hand-drawn-doctor-cartoon-illustration_23-2150696182.jpg?t=st=1698954224~exp=1698954824~hmac=d6985238b5235b3c43c051de671cd649ec9dd3e57a8865861daf6c98d5d8e8c9" />
+                            </div>
+                            <h3>Dr. Snehanshu Sharma (BHMS)</h3>
+                            <h3>Homeopath</h3>
+                            <p>Matwari, Hazaribagh</p>
+                        </div>
+                        <div class="card card-1 w-auto d-flex justify-content-between align-items-center">
+                            <div class="profile-doc">
+                                <img src="https://img.freepik.com/premium-vector/nice-good-looking-young-lady-doctor-cartoon-vector-illustration_825692-145.jpg?w=740" />
+                            </div>
+                            <h3>Dr. Ritu Kumari (MBBS)</h3>
+                            <h3 class="m">Endocrinologists</h3>
+                            <p>Annada chowk, Hazaribagh</p>
+                        </div>
+                        <div class="card card-1 w-auto d-flex justify-content-between align-items-center">
+                            <div class="profile-doc">
+                                <img src="https://img.freepik.com/free-vector/hand-drawn-doctor-cartoon-illustration_23-2150696179.jpg?size=626&ext=jpg&ga=GA1.1.128012166.1689853347&semt=ais" />
+                            </div>
+                            <h3>Dr. Shailendra Kumar (BDS)</h3>
+                            <h3>CardioLogist(Heart)</h3>
+                            <p>Jhanda chowk, Hazaribagh</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+
+                    <div class="cards d-flex justify-content-between gap-3">
+                        <div class="card card-1 w-auto d-flex justify-content-between align-items-center">
+                            <div class="profile-doc">
+                                <img src="https://img.freepik.com/free-vector/hand-drawn-doctor-cartoon-illustration_23-2150696182.jpg?t=st=1698954224~exp=1698954824~hmac=d6985238b5235b3c43c051de671cd649ec9dd3e57a8865861daf6c98d5d8e8c9" />
+                            </div>
+                            <h3>Dr. Nidhin Varghese (MBBS)</h3>
+                            <h3>Dermatology</h3>
+                            <p>Meru, Hazaribagh</p>
+                        </div>
+                        <div class="card card-1 w-auto d-flex justify-content-between align-items-center">
+                            <div class="profile-doc">
+                                <img src="https://img.freepik.com/premium-vector/nice-good-looking-young-lady-doctor-cartoon-vector-illustration_825692-145.jpg?w=740" />
+                            </div>
+                            <h3>Dr. Seema Verma (MBBS)</h3>
+                            <h3 class="m">CardioLogist(Heart)</h3>
+                            <p>Kallu chowk, Hazaribagh</p>
+                        </div>
+                        <div class="card card-1 w-auto d-flex justify-content-between align-items-center">
+                            <div class="profile-doc">
+                                <img src="https://img.freepik.com/free-vector/hand-drawn-doctor-cartoon-illustration_23-2150696179.jpg?size=626&ext=jpg&ga=GA1.1.128012166.1689853347&semt=ais" />
+                            </div>
+                            <h3>Dr. Rehan Sharma (MBBS)</h3>
+                            <h3>Gastroenterologists</h3>
+                            <p>Matwari, Hazaribagh</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="carousel-control-prev prev text-danger" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row banner1 d-flex">
+
+            <div class="image d-flex justify-content-center">
+                <img class="h-100 w-75 opacity-100" src="~/Content/images/banner1.jpg" />
+            </div>
+
+            <div class="content2 d-flex justify-content-center pt-3">
+                <h2 class=" text-center m-auto">The Expert Medical Team and Comprehensive Care</h2>
+                <p class="w-75">
+                    The medical team is dedicated to providing patient-centered care, ensuring you receive
+                    the best treatment and support. Experienced doctors have a range of specialties, offering
+                    innovative treatments and participating in cutting-edge research to benefit our patients. Whether
+                    it's community outreach or staying updated with the latest advancements, we're committed to your well-being.
+                    We also provide educational resources and wellness tips to empower you with the knowledge you need for a healthier
+                    life.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</main>
+<style>
+    .card {
+        background-color: #CCBABC;
+    }
+    .Dashboard {
+        height: 50vw;
+        /*background-color: lightcoral;*/
+        overflow: hidden;
+        position: relative;
+    }
+
+        .Dashboard .main1 {
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+
+        .Dashboard .ma-1 {
+            left: 0;
+        }
+
+
+
+    .main1 {
+        min-height: 42vw;
+        background-color: #EADCD9;
+    }
+
+        .main1 h2 {
+        }
+
+    .content1 {
+        /*background-color: lightgreen;*/
+        /* padding: 0 2%;*/
+        width: 50%;
+    }
+
+        .content1 .cont {
+            /*background-color: cornflowerblue;*/
+            width: 100%;
+            height: 50%;
+        }
+
+            .content1 .cont h2 {
+                color: #605E5E;
+                font-size: 3.5vw;
+                width: 85%;
+                margin-left: -20%;
+                text-align: center;
+                font-weight: 600;
+            }
+
+        .content1 h2 {
+            /*  background-color: deeppink;*/
+        }
+
+        .content1 .cont-p-a {
+            /*background-color: greenyellow;*/
+        }
+
+            .content1 .cont-p-a p {
+                width: 55%;
+                color: #605E5E;
+                font-size: 1vw;
+                /*margin-left: -8%;*/
+                /*margin-right: 10%;*/
+                /*background-color: lightgoldenrodyellow;*/
+            }
+
+        .content1 .cont .logbtn {
+            font-size: 1vw;
+        }
+
+    .space {
+        margin-right: 20%;
+        width: 25px;
+    }
+
+    .main1 .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .main1 .image .img {
+            width: 90%;
+            height: 75%;
+        }
+
+        .main1 .image img {
+            width: 100%;
+            height: 100%;
+        }
+
+    .doctor-head {
+        color: #605E5E;
+        font-size: 2.8vw;
+        font-weight: 600;
+    }
+
+    .Doctor-cards {
+        min-height: 20%;
+        width: 100%;
+        margin-top: 7vw;
+        background-color: #EADCD9;
+    }
+
+        .Doctor-cards .card h3 {
+            font-size: 1.3vw;
+        }
+
+        .Doctor-cards .card p {
+            font-size: 1vw;
+        }
+
+    .profile-doc {
+        height: 5vw;
+        width: 5vw;
+        border-radius: 5rem;
+        border: 3px solid green;
+    }
+
+        .profile-doc img {
+            height: 100%;
+            width: 100%;
+            border-radius: 5rem;
+        }
+
+    .cards {
+        height: 20vw;
+        width: 100%;
+        padding: 2% 5%;
+    }
+
+    .card {
+        min-width: 20vw;
+        padding: 2% 2%;
+    }
+
+    .prev {
+        margin-left: -3.5rem;
+    }
+
+    .next {
+        margin-right: -3.5rem;
+    }
+
+
+    .banner1 {
+        background-color: #EADCD9;
+    }
+
+        .banner1 .img {
+            height: 60%;
+            width: 100%;
+        }
+
+    .content2 {
+        width: 100%;
+        background-color: #EADCD9;
+    }
+
+        .content2 h2 {
+            font-size: 2.5vw;
+            color: #605E5E;
+            width: 55%;
+            padding: 0 5%;
+        }
+
+        .content2 p {
+            font-size: 1.1vw;
+            color: #605E5E;
+            padding: 3% 5%;
+        }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+<script>
+
+    var h1s = document.querySelectorAll(".main1");
+    var index = 0;
+
+        setInterval(function () {
+            gsap.to(h1s[index], {
+                left: "-=100%",
+                ease: Expo.easeInOut,
+                duration: 1,
+                onComplete: function () {
+                    gsap.set(this._targets[0], { left: "100%" });
+                    animating = false
+                },
+            });
+            index === h1s.length - 1 ? (index = 0) : index++;
+            gsap.to(h1s[index], {
+                left: "-=100%",
+                ease: Expo.easeInOut,
+                duration: 1,
+            });
+        },5000)
+
+
+/*    function peeche() {
+        gsap.to(h1s[index], {
+            right: "100%",
+            ease: Expo.easeInOut,
+            duration: 1,
+
+        });
+         index++;
+        gsap.to(h1s[index], {
+            right: "100%",
+            ease: Expo.easeInOut,
+            duration: 1,
+        });
+    }
+    var h1s = document.querySelectorAll(".main1");
+    var index = h1s.length - 1; // Start from the last element
+
+    function peeche() {
+        gsap.to(h1s[index], {
+            left: "-=100%", // Move left
+            ease: Expo.easeInOut,
+            duration: 1,
+            onComplete: function () {
+                gsap.set(this._targets[0], { left: "100%" }); // Reset to the right
+            },
+        });
+        index === 0 ? (index = h1s.length - 1) : index--;
+        gsap.to(h1s[index], {
+            left: "-=100%", // Move left
+            ease: Expo.easeInOut,
+            duration: 1,
+        });
+    };
+
+
+    document.getElementById("left").addEventListener("click", peeche);*/
+
+</script>

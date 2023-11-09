@@ -1,0 +1,519 @@
+﻿
+@{
+    ViewBag.Title = "Medicines";
+}
+
+@*<h2>@ViewBag.Message</h2>*@
+
+
+
+<div class="container mt-4 ">
+    <div class="input-group mb-3 d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-center align-items-center gap-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for a medicine">
+            <div class="input-group-append">
+                <button class="btn btn-primary src" id="searchButton">Search</button>
+            </div>
+        </div>
+
+        <div id="suggestions">
+            <p class="note">Consult a doctor before taking non-OTC medications.</p>
+        </div>
+
+    </div>
+
+    <!-- Rest of the existing code for medicine cards goes here -->
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Aspirin<span>-Tablet</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">Pain, Fever, Inflammation</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Aspirin</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Adults and children over 12</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Upset stomach, Heartburn, Dizziness</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Avoid if allergic to aspirin, Don't take on an empty stomach</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹59/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Amoxicillin<span>-Tablet</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">Bacterial Infections</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Amoxicillin</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Children and adults</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Diarrhea, Nausea, Rash</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Finish the full course, Take with food to reduce stomach upset</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹89/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Ibuprofen<span>-Tablet</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">Pain, Fever, Inflammation</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Ibuprofen</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Adults and children over 6 months</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Stomach pain, Headache, Dizziness</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Don't exceed the recommended dosage, Take with food or milk</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹56/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Acetaminophen (Tylenol)<span>-Tablet</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">Pain, Fever</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Acetaminophen (Tylenol)</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Adults and children</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Rare when taken as directed</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Follow the dosage instructions carefully</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹19/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Cetirizine (Zyrtec)<span>-Tablet</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">Allergies, Hay Fever</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Cetirizine (Zyrtec)</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Adults and children over 6</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Drowsiness, Dry mouth</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Avoid alcohol, May cause drowsiness</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹115/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Albuterol (Ventolin)<span>-Tablet</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">Asthma, Bronchospasm</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Albuterol (Ventolin)</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Adults and children</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Shakiness, Rapid heartbeat</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Use as a rescue inhaler, Follow proper inhalation technique</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹232/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Omeprazole (Prilosec)<span>-Paste or Gel</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">Acid Reflux, Heartburn</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Omeprazole (Prilosec)</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Adults only</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Muscle pain, Liver problems</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Avoid grapefruit, Notify doctor of muscle pain</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹39/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Lisinopril (Zestril)<span>-Tablet</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">High Blood Pressure</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Lisinopril (Zestril)</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Adults</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Cough, Low blood pressure</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Check blood pressure regularly</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹83/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Warfarin (Coumadin)<span>-Tablet</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">Blood Clots</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Warfarin (Coumadin)</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Adults</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Bleeding, Bruising</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Regular blood tests, Avoid vitamin K-rich foods</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹67/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cardfr">
+        <div class="card-body">
+            <h3 class="card-title text-center">Metformin (Glucophage)<span>-Tablet</span></h3>
+            <div class="card-border d-md-flex gap-md-3">
+                <div class="card-cont-1 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Conditions/Symptoms -->
+                    <h6 class="card-subtitle mb-2 text-muted">Conditions/Symptoms</h6>
+                    <p class="card-text">Type 2 Diabetes</p>
+
+                    <!-- Medicine Name -->
+                    <h6 class="card-subtitle mb-2 text-muted">Medicine Name</h6>
+                    <p class="card-text">Metformin (Glucophage)</p>
+
+                    <!-- Suitable for Age -->
+                    <h6 class="card-subtitle mb-2 text-muted">Suitable for Age</h6>
+                    <p class="card-text">Adults</p>
+                </div>
+                <div class="card-cont-2 p-md-3 card-cont w-100 mt-md-0 mt-3">
+                    <!-- Side Effects -->
+                    <h6 class="card-subtitle mb-2 text-muted">Side Effects</h6>
+                    <p class="card-text">Nausea, Diarrhea</p>
+
+                    <!-- Precautions -->
+                    <h6 class="card-subtitle mb-2 text-muted">Precautions</h6>
+                    <p class="card-text">Monitor blood sugar, Take with meals</p>
+
+                    <!-- Price -->
+                    <h6 class="card-subtitle mb-2 text-muted">Price</h6>
+                    <p class="card-text">₹74/each</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("searchInput");
+            const searchButton = document.getElementById("searchButton");
+            const suggestions = document.getElementById("suggestions");
+
+            // Function to filter cards based on search term
+            function filterCards(searchTerm) {
+                const cards = document.querySelectorAll(".card.cardfr");
+
+                cards.forEach(function (card) {
+                    const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
+                    const conditions = card.querySelector(".card-text").textContent.toLowerCase();
+
+                    if (cardTitle.includes(searchTerm) || conditions.includes(searchTerm)) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            // Function to update suggestions based on search term
+            function updateSuggestions(searchTerm) {
+                const cards = document.querySelectorAll(".card.cardfr");
+                const suggestionsList = [];
+                cards.forEach(function (card) {
+                    const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
+                    if (cardTitle.includes(searchTerm)) {
+                        suggestionsList.push(cardTitle);
+                    }
+                });
+
+                suggestions.innerHTML = "";
+                if (suggestionsList.length > 0) {
+                    suggestions.style.display = "block";
+                    suggestionsList.forEach(function (suggestion) {
+                        const suggestionItem = document.createElement("div");
+                        suggestionItem.textContent = suggestion;
+                        suggestionItem.style.cursor = "pointer";
+                        suggestions.style.border = "1px solid black";
+                        suggestions.style.borderRadius = "0.4vw";
+                        suggestions.style.padding = "0.3vw";
+                        suggestions.style.marginTop = "1vw";
+                        suggestions.style.hover = "";
+                        suggestionItem.addEventListener("click", function () {
+                            searchInput.value = suggestion;
+                            suggestions.style.display = "none";
+                            filterCards(searchInput.value);
+                        });
+                        suggestions.appendChild(suggestionItem);
+                    });
+                } else {
+                    suggestions.style.display = "none";
+                }
+            }
+
+            // Add input event listener to the search input for real-time filtering and suggestions
+            searchInput.addEventListener("input", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+                filterCards(searchTerm);
+                updateSuggestions(searchTerm);
+            });
+
+            // Add click event listener to the search button
+            searchButton.addEventListener("click", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+                filterCards(searchTerm);
+            });
+        });
+</script>
+
+
+
+<style>
+    .note{
+        color: white;
+        border: 1px solid black;
+        border-radius: 0.2rem;
+        background-color: red;
+        padding: 0.4rem;
+    }
+    .src{
+
+    }
+    .card {
+        /*background-color: #EADCD9;*/
+
+        background-color: #CCBABC;
+        box-shadow: .8px .9px 3px grey;
+        transition: 0.3s ease;
+    }
+
+        .card:hover {
+            box-shadow: 1px 8px 20px #CCBABC;
+        }
+
+    .card-border {
+        width: 100%;
+    }
+
+    #suggestions:active{
+        border: 2px solid black;
+        padding: 1vw;
+        border-radius: 0.4vw;
+    }
+    .cardfr {
+        margin-top: 4vw;
+    }
+
+    .card-cont {
+        width: 40vw;
+        background-color: white;
+    }
+
+    span {
+        display: none;
+        color: #6C757D;
+    }
+
+    .card-title {
+        font-weight: 600;
+        margin-bottom: 1vw;
+        padding: 1vw;
+        background-color: #CCBABC;
+        transition: 0.3s ease;
+    }
+
+        .card-title:hover {
+            background-color: white;
+        
+
+    {
+        display: inline-block;
+    }
+
+    }
+
+    .card-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        margin-left: 2vw;
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+</style>

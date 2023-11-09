@@ -1,0 +1,224 @@
+﻿@using MedXplorer.Models
+@model MedXplorer.Models.SignupModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+
+
+
+
+<div class="wrapper">
+    <div class="container main">
+        <div class="rows">
+            <div class="row-in d-flex  w-100 h-100">
+                <div class="registerForm  d-flex align-items-center w-50 justify-content-center">
+                    @using (Html.BeginForm("Login", "Main", FormMethod.Post))
+                    {
+                        <div class="input-box bg-black bg-opacity-25 p-3">
+                            <header>SignIn</header>
+
+
+                            <div class="input-field">
+                                @Html.TextBoxFor(model => model.email, new { @class = "input", required = "required" })
+                                <label for="email">Email</label>
+                                @*@Html.LabelFor(model => model.email, "Email")
+            @Html.TextBoxFor(model => model.email, new { @class = "input" })*@
+                            </div>
+                            <div class="input-field">
+                                @Html.PasswordFor(model => model.password, new { @class = "input", required = "required" })
+                                <label for="password">Password</label>
+                                @*@Html.LabelFor(model => model.password,"Password")
+            @Html.PasswordFor(model => model.password, new { @class = "input" })*@
+                            </div>
+                            <label id="lbl_authError" class="fiels-validation-error"> @Html.DisplayFor(er => er.LoginErrorMessage, new { @class = "err" })</label>
+                            <br />
+
+
+                            <div class="input-field">
+                                <input type="submit" class="submit" value="Sign In">
+                            </div>
+                            <div class="signin">
+                                <span>Don't have an account?@Html.ActionLink("Register", "Register", "Main", new { area = "" }, new { @class = "linkss" })</span>
+
+                            </div>
+
+                        </div>
+                    }
+                </div>
+
+                <div class="image-section d-flex justify-content-center align-items-center w-50 position-relative">
+                    <div class="image d-flex align-items-center position-relative">
+                        <img src="~/Content/images/Health tree.png" class="position-absolute" />
+                        <h2 class="p-4">Healthy habits start with a single decision.</h2>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<style>
+
+    .wrapper {
+        background: #ececec;
+        padding: 0 20px 0 20px;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .rows {
+        width: 900px;
+        height: 550px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+    }
+
+
+
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+        .text p {
+            color: blue;
+            font-size: 18px;
+        }
+
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .input-box {
+        border-radius: 0.5vw;
+        box-sizing: border-box;
+    }
+
+        .input-box header {
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 10px 0 10px;
+    }
+
+    .input {
+        height: 45px;
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        outline: none;
+        margin-bottom: 20px;
+        color: #40414a;
+    }
+
+    .input-box .input-field label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+
+    .input-field .input:focus ~ label {
+        top: -10px;
+        font-size: 13px;
+    }
+
+    .input-field .input:valid ~ label {
+        top: -10px;
+        font-size: 13px;
+        color: #5d5076;
+    }
+
+    .input-field .input:focus, .input-field .input:valid {
+        border-bottom: 1px solid #743ae1;
+    }
+
+    .submit {
+        border: none;
+        outline: none;
+        height: 45px;
+        background: #ececec;
+        border-radius: 5px;
+        transition: 0.4s;
+    }
+
+        .submit:hover {
+            background: rgba(37,95,156,0.9);
+            color: #fff;
+        }
+
+    .signin {
+        text-align: center;
+        font-size: small;
+        margin-top: 25px;
+    }
+
+    .registerForm {
+        height: 100%;
+    }
+
+    .image-section {
+        background-color: #2F4858;
+        border-top-right-radius: 0.7rem;
+        border-bottom-right-radius: 0.7rem;
+    }
+
+    .image {
+        height: 70%;
+        width: 80%;
+    }
+
+        .image img {
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            opacity: 50%;
+        }
+
+        .image h2 {
+            font-size: 3vw;
+            z-index: 100;
+            color: white;
+            position: absolute;
+            font-family: 'Space Grotesk', sans-serif;
+            text-align: center;
+            opacity: 80%;
+        }
+        .linkss{
+            text-decoration: underline;
+            color: blue;
+        }
+        .err{
+            color: red;
+        }
+</style>
+

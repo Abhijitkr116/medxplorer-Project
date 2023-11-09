@@ -1,0 +1,114 @@
+﻿@using MedXplorer.Models
+@model DoctorInsertModel
+
+@{
+    ViewBag.Title = "Book an appointment";
+}
+
+<h2 class="text-center text-uppercase bg-dark bg-opacity-25 p-4 mt-4">Book an Appointment</h2>
+
+<div class="container Dashboard d-flex justify-content-center align-items-center bg-dark bg-opacity-25">
+
+    @{
+        DoctorInsertModel data = Model;
+    }
+    @using (Html.BeginForm())
+    {
+        <div class="cont d-flex justify-content-center container-1">
+
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.Doctor_Name, new { @class = "form-control", @id = "floatingInput", @placeholder = "Patient name", required = "required" })
+                <label for="floatingInput">Add Doctor's name</label>
+            </div>
+
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.Specialist, new { @class = "form-control", @id = "floatingPassword", @placeholder = "Patient Address", required = "required" })
+                <label for="floatingInput">Add Specialist name</label>
+            </div>
+
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.State, new { @class = "form-control", @id = "floatingInput", @placeholder = "Patient Contact no.", required = "required" })
+                <label for="floatingInput">Add State name</label>
+            </div>
+
+        </div>
+
+        <div class="cont d-flex container-2">
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.city, new { @class = "form-control", @id = "floatingPassword", @placeholder = "City", required = "required" })
+                <label for="floatingInput">Add City name</label>
+            </div>
+
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.Full_Address, new { @class = "form-control", @id = "floatingInput", @placeholder = "Full_Address", required = "required" })
+                <label for="floatingInput">Add Full Address</label>
+            </div>
+
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.Experience, new { @class = "form-control", @id = "floatingPassword", @placeholder = "5 Years", required = "required" })
+                <label for="floatingInput">Add Experience years of Doctor</label>
+            </div>
+        </div>
+
+        <div class="cont d-flex container-3">
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.Working_Place, new { @class = "form-control", @id = "floatingInput", @placeholder = "Hospital or Clinic", required = "required" })
+                <label for="floatingInput">Add a Working place of Doctor</label>
+            </div>
+
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.Start_Time, new { @class = "form-control", @id = "floatingPassword", @placeholder = "00:00 AM", required = "required" })
+                <label for="floatingInput">Add a working start time</label>
+            </div>
+
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.End_Time, new { @class = "form-control", @id = "floatingInput", @placeholder = "00:00 PM", required = "required" })
+                <label for="floatingInput">Add a working end time</label>
+            </div>
+        </div>
+
+        <div class="cont d-flex container-4">
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.Qualification, new { @class = "form-control", @id = "floatingPassword", @placeholder = "MBBS/BHMS/BUMS/BAMS", required = "required" })
+                <label for="floatingInput">Add a Qualification of doctor</label>
+            </div>
+
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.Contact_No, new { @class = "form-control", @id = "floatingInput", @placeholder = "+91 0000123456", required = "required" })
+                <label for="floatingInput">Add a Contact Number </label>
+            </div>
+
+            <div class="form-floating">
+                @Html.TextBoxFor(a => a.Fees, new { @class = "form-control", @id = "floatingPassword", @placeholder = "Appointment fee", required = "required" })
+                <label for="floatingInput">Add fees for booking an appointment</label>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <input type="submit" value="submit" class="btn btn-primary" />
+        </div>
+    }
+</div>
+
+<style>
+    h2 {
+        border-top-left-radius: 1vw;
+        border-top-right-radius: 1vw;
+        color: #868687;
+        font-size: 2.5vw;
+    }
+
+    .Dashboard {
+        height: 35vw;
+        margin-bottom: 8vw;
+    }
+
+    .form-control {
+        width: 25vw;
+    }
+
+    .cont {
+        margin-bottom: 2vw;
+        gap: 2vw;
+    }
+</style>

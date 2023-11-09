@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Services";
+}
+
+@*<h2>@ViewBag.Message</h2>*@
+
+<div class="main">
+    <div class="box box-2 bg-success bg-opacity-25 d-md-flex">
+        <div class="col-10">
+            <h2>Hospital or Clinic</h2>
+            <p>In our "Hospital or Clinic" section, you can explore information about the medical facilities we provide. Whether you need inpatient care, surgical services, or specialized treatments, this section will give you an overview of our state-of-the-art hospital or clinic. You'll find details about our infrastructure, facilities, and a glimpse of the warm and compassionate environment we offer to our patients.</p>
+        </div>
+        <div class="buttons col-2 d-flex justify-content-center align-items-center">
+            @Html.ActionLink("Hospitals or Clinics", "Login", "Main", new { area = "" }, new { @class = "btn logbtn btn-success" })
+        </div>
+    </div>
+
+    <div class="box box-1 bg-success bg-opacity-25 d-md-flex">
+        <div class="col-10">
+            <h2>Find a Doctor</h2>
+            <p>The "Find a Doctor" feature is designed to help you connect with the right healthcare professional for your needs. You can search for experienced doctors, specialists, and healthcare providers who are part of our team. This section provides profiles of our medical experts, including their specialties, qualifications, and patient reviews, making it easier for you to make an informed choice about your healthcare.</p>
+        </div>
+        <div class="buttons col-2 d-flex justify-content-center align-items-center">
+            @Html.ActionLink("Find doctor", "Login", "Main", new { area = "" }, new { @class = "btn logbtn btn-success" })
+        </div>
+    </div>
+
+    <div class="box box-1 bg-success bg-opacity-25 d-md-flex">
+        <div class="col-10">
+            <h2> Book an Appointment</h2>
+            <p>Booking an appointment with us is hassle-free and convenient. In this section, you'll learn about the different ways you can schedule a visit to our hospital or clinic. Whether you prefer to book online, via phone, or in-person, we offer a range of options to accommodate your preferences. We prioritize your time and ensure a smooth appointment booking process.</p>
+        </div>
+        <div class="buttons col-2 d-flex justify-content-center align-items-center">
+            @Html.ActionLink("Book an Appointment", "Login", "Main", new { area = "" }, new { @class = "btn logbtn btn-primary" })
+        </div>
+    </div>
+
+    <div class="box box-1 bg-success bg-opacity-25 d-md-flex">
+        <div class="col-10">
+            <h2>Find Doctor-Prescribed Medicines</h2>
+            <p>When your doctor prescribes medication, our "Find Doctor-Prescribed Medicines" section will help you locate and acquire your prescribed drugs with ease. You can access our pharmacy services and learn about the medicines your healthcare provider has recommended. We prioritize your well-being and make sure you have the medications you need for your treatment.</p>
+        </div>
+        <div class="buttons col-2 d-flex justify-content-center align-items-center">
+            @Html.ActionLink("Medicine", "Login", "Main", new { area = "" }, new { @class = "btn logbtn btn-success" })
+        </div>
+    </div>
+
+    <div class="box box-1 bg-success bg-opacity-25 d-md-flex">
+        <div class="col-10">
+            <h2>Exclusive Subscriber Benefits</h2>
+            <p>We believe in rewarding our loyal subscribers. In this section, we introduce special perks and benefits exclusively designed for our subscribers. As a subscriber, you'll enjoy early access to health-related content, discounts on services, priority appointments, and much more. We're committed to delivering added value to those who trust us with their healthcare needs.</p>
+        </div>
+        <div class="buttons col-2 d-flex justify-content-center align-items-center">
+            @Html.ActionLink("Subscribe", "Login", "Main", new { area = "" }, new { @class = "btn logbtn btn-success" })
+        </div>
+    </div>
+</div>
+
+<style>
+    .box h2{
+        margin-bottom: 1vw;
+    }
+    .box-2{
+        margin-top: 4vw;
+    }
+    .box{
+        margin-bottom: 5vw;
+        padding: 4vw;
+    }
+</style>
