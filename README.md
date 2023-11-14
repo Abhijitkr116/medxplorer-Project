@@ -7,7 +7,7 @@ HealthCare Finder addresses the challenge of efficiently finding nearby availabl
 Our web application simplifies the healthcare and research experience by providing a user-friendly platform to find doctors, book appointments, explore hospitals, and access detailed medicine information.
 
 ## 3. ER Diagram/ Flow chart/ Sequence Diagram
-Added as a png file....
+Added as a jpg file...."ER Diagram of MedXplorer Project"
 
 ## 4. Choice of Technology 
 ### Frontend
