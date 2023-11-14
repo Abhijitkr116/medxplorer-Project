@@ -27,7 +27,9 @@ Added as a png file....
 ## 5. Codebase
 The codebase is organized and available on:
 - [GitHub](https://github.com/Abhijitkr116/medxplorer-Project.git)
+  <br>
   or
+  <br>
 - [Download ZIP](https://drive.google.com/file/d/1pPuUgtKuqPBbPpkPPO6pYqGqz4OgGffX/view?usp=drive_link)
 
 
