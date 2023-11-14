@@ -35,9 +35,12 @@ The codebase is organized and available on:
 
 ## Features
 - **User Authentication:** Secure signup and login process.
-- **Doctor Finder:** Easily find nearby available doctors.
+- **Doctor Finder:** Easily find nearby available doctors. (Works after proper database connection, it is working in our local pc)
 - **Appointment Booking:** Book appointments seamlessly after signup and login.
-- **Hospital Discovery:** Discover the best hospitals nearby.
+- **Hospital Discovery:** Discover the best hospitals nearby. 
 - **Medicine Information:** Access detailed information about medicines.
+
+## Under Process 
+we are working on Book an appointment page with proper connection with Login or Signup.
 
 
