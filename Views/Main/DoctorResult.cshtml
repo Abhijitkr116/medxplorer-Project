@@ -1,53 +1,31 @@
 ﻿@using MedXplorer.Models
-@model List<DoctorInsertModel>
+@*@model List<DoctorInsertModel>*@
+@model DoctorInsertModel
 @{
     ViewBag.Title = "DoctorResult";
 }
+<head>
+
+</head>
 
 
 <div class="container-main d-flex">
     <div class="search-panel bg-success bg-opacity-50  align-items-center">
 
         <p>Find the best Doctors simply by choosing the Specialist, Doctor and Location</p>
-
-        @using (Html.BeginForm())
+       @* @{
+            DoctorInsertModel data = Model;
+        }
+*@
+        @using (Html.BeginForm("Search", "Main", FormMethod.Post, new { @id = "elementEditForm", @class = "form-horizontal form-label-left" }))
         {
             <div class="content2-in d-flex flex-column gap-2">
-                <input class="form-control" list="datalistOption1" id="exampleDataList" placeholder="Specialist, Condition">
-                <datalist class="cont" id="datalistOption1">
-                    <option value="Cardiologist">
-                    <option value="Cardiologist (Heart)">
-                    <option value="Diabities">
-                    <option value="Endocrinologist">
-                    <option value="General Physicist">
-                    <option value="Surgeon">
-                </datalist>
-
-                <input class="form-control" list="datalistOption2" id="exampleDataList" placeholder="Doctor">
-                <datalist class="cont" id="datalistOption2">
-                    <option value="Dr. Vikash Kumar">
-                    <option value="Dr. Sneha Sinha">
-                    <option value="Dr. Manoj Singh ">
-                    <option value="Dr. Snehanshu Sharma ">
-                    <option value="Dr. Ritu Kumari">
-                    <option value="Dr. Shailendra Kumar">
-                    <option value="Dr. Nidhin Varghese">
-                    <option value="Dr. Seema Verma">
-                    <option value="Dr. Rehan Sharma">
-                    <option value="Dr. Arun Sinha">
-                    <option value="Dr. PK Sinha">
-                </datalist>
-
-                <input class="form-control" list="datalistOption3" id="exampleDataList" placeholder="Location">
-                <datalist class="cont" id="datalistOption3">
-                    <option value="Hazaribagh">
-                    <option value="Ranchi">
-                    <option value="Jamshedpur">
-                    <option value="Dhanbad">
-                    <option value="Tata">
-                </datalist>
+                @(Html.DropDownListFor(acc => acc.Specialist, new SelectList(Model.ListofSpecialist), "Add Specialist"))
+                @(Html.DropDownListFor(acc => acc.Doctor_Name, new SelectList(Model.ListofDoctors), "Add Doctor"))
+                @(Html.DropDownListFor(acc => acc.State, new SelectList(Model.ListofState), "Add State"))
+                @(Html.DropDownListFor(acc => acc.City, new SelectList(Model.ListofCity), "Add City"))
             </div>
-            <div class="submit mt-3 d-flex justify-content-center"><input type="submit" class="btn btn-primary submitbtn" value="Seacrh" /></div>
+            <div class="submit mt-3 d-flex justify-content-center"><input type="submit" class="btn btn-primary submitbtn" value="Search" /></div>
         }
     </div>
 
@@ -57,9 +35,9 @@
         <div class="doctor-result w-75 p-3 bg-danger bg-opacity-25">
 
     @{
-        List<DoctorInsertModel> doctorresult = Model;
+        /*DoctorInsertModel doctorresult = Model;*/
 
-        foreach (DoctorInsertModel data in doctorresult)
+        foreach (var data in Model.selectListItems)
         {
 
             <div class="cards d-flex bg-light bg-opacity-75">
@@ -80,7 +58,7 @@
 
                                 <div class="location w-100 pt-3">
                                     <div class="location-in d-flex">
-                                        <i class="ri-map-pin-line loc h-50"></i><p class="w-100"><span>@data.city</span><span>, @data.State</span></p>
+                                        <i class="ri-map-pin-line loc h-50"></i><p class="w-100"><span>@data.City</span><span>, @data.State</span></p>
                                     </div>
 
                                     <p class="address w-100">@data.Full_Address</p>

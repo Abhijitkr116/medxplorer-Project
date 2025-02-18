@@ -12,8 +12,34 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@*@popperjs*@/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript">
+            $(document).ready(function () {
+        $('#State').change(function () {
+            debugger;
+            var datavalue = { statename: $('#State').val() };
+            $('#City').empty();
+    
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("DropdownCity", "Admin")',
+                dataType: 'Json',
+                data: datavalue,
+                success: function (cities) {
+                    city = cities.ListofCity;
+                    $.each(city, function (i, city) {
+                        $('#City').append('<option>' + city + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert("Fail to retrieve city");
+                }
+            });
+        })
+    })
+</script>
 </head>
 <body>
     <div class="header sticky-top bg-light bg-opacity-75">
@@ -88,7 +114,7 @@
     *{
         font-family: 'poppins';
     }
-    
+
     #nav-ul{
         width: 80%;
         font-weight: 500;

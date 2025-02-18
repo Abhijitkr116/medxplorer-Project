@@ -13,8 +13,11 @@ namespace MedXplorer.Controllers
         [HttpGet]
         public ActionResult Insert()
         {
-            DoctorInsertModel doctorinsertModel = new DoctorInsertModel();
-            ViewResult result = View("Insert", doctorinsertModel);
+            DoctorInsertModel dropdownModel = new DoctorInsertModel();
+            DropdownsManager dropdownManager = new DropdownsManager();
+            dropdownModel = dropdownManager.GetState(dropdownModel);
+            dropdownModel = dropdownManager.GetSpecialists(dropdownModel);
+            ViewResult result = View("Insert", dropdownModel);
             ActionResult ar = result;
             return ar;
         }
@@ -23,12 +26,21 @@ namespace MedXplorer.Controllers
         {
             DoctorInsertManager insertM = new DoctorInsertManager();
             int count = insertM.InsertData(doctorinsertModel);
-            //int Total = insertM.Total_No_Of_User(insertModel);
-
-            return View();
-
-
-
+            //Add Success view
+            if(count > 0)
+            {
+                return View("Success");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public JsonResult DropdownCity(String statename)
+        {
+            DropdownsManager dropdownManager = new DropdownsManager();
+            DoctorInsertModel CityModel  = dropdownManager.GetCity(statename);
+            return Json(CityModel);
         }
     }
 }

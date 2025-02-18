@@ -23,7 +23,7 @@ namespace MedXplorer.Models
                         cmd.Parameters.AddWithValue("@Doctor_Name", doctorinsertModel.Doctor_Name);
                         cmd.Parameters.AddWithValue("@Specialist", doctorinsertModel.Specialist);
                         cmd.Parameters.AddWithValue("@State", doctorinsertModel.State);
-                        cmd.Parameters.AddWithValue("@city", doctorinsertModel.city);
+                        cmd.Parameters.AddWithValue("@city", doctorinsertModel.City);
                         cmd.Parameters.AddWithValue("@Full_Address", doctorinsertModel.Full_Address);
                         cmd.Parameters.AddWithValue("@Experience ", doctorinsertModel.Experience);
                         cmd.Parameters.AddWithValue("@Working_Place", doctorinsertModel.Working_Place);

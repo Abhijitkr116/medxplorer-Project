@@ -5,10 +5,15 @@
 @{
     ViewBag.Title = "Find Doctor";
 }
-<main aria-labelledby="title">
-    @*<h2 id="title">@ViewBag.Title.</h2>
-        <h3>@ViewBag.Message</h3>*@
 
+
+<!--<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+@*    <script src="~/Scripts/dropdownAzax.js"></script>*@
+    <!--<script type="text/javascript" src='@Url.Content("~/Scripts/dropdownAzax.js")'></script>
+</head>-->
+
+<main aria-labelledby="title">
     <div class="Doctor-search bg-dark mh-75 w-100 position-relative">
         <div class="dashb-image bg-white h-100 w-100 d-flex flex-column gap-5 justify-content-center">
             <img class="w-100 h-100 position-absolute opacity-75" src="~/Content/images/Doctord.jpg" />
@@ -22,36 +27,12 @@
                 @using (Html.BeginForm())
                 {
                     <div class="content2-in d-flex justify-content-center gap-3">
-                        @(Html.TextBoxFor(acc => acc.Specialist, new { @class = "acctype form-control", list = "datalistOption1" ,id = "exampleDataList" ,placeholder = "Speciality, Condition" }))
-                        <datalist class="cont" id="datalistOption1">
-                            <option value="San Francisco">
-                            <option value="New York">
-                            <option value="Seattle">
-                            <option value="Los Angeles">
-                            <option value="Chicago">
-                        </datalist>
 
-                        @(Html.TextBoxFor(acc => acc.Doctor_Name, new { @class = "acctype form-control", list = "datalistOption2" ,id = "exampleDataList" ,placeholder = "Doctor" }))
-                        <datalist class="cont" id="datalistOption2">
-                            <option value="Dr. Vikash Kumar">
-                            <option value="Dr. Sneha Sinha">
-                            <option value="Dr. Manoj Singh ">
-                            <option value="Dr. Snehanshu Sharma ">
-                            <option value="Dr. Ritu Kumari">
-                            <option value="Dr. Shailendra Kumar">
-                            <option value="Dr. Nidhin Varghese">
-                            <option value="Dr. Seema Verma">
-                            <option value="Dr. Rehan Sharma">
-                        </datalist>
+                        @(Html.DropDownListFor(acc => acc.Specialist, new SelectList(Model.ListofSpecialist), "Add Specialist"))
+                        @(Html.DropDownListFor(acc => acc.Doctor_Name, new SelectList(Model.ListofDoctors), "Add Doctor"))
+                        @(Html.DropDownListFor(acc => acc.State, new SelectList(Model.ListofState), "Add State"))
+                        @(Html.DropDownListFor(acc => acc.City, new SelectList(Model.ListofCity), "Add City"))
 
-                        @(Html.TextBoxFor(acc => acc.city, new { @class = "acctype form-control", list = "datalistOption3" ,id = "exampleDataList" ,placeholder = "Location" ,required="required"}))
-                        <datalist class="cont" id="datalistOption3">
-                            <option value="Hazaribagh">
-                            <option value="Ranchi">
-                            <option value="Jamshedpur">
-                            <option value="Dhanbad">
-                            <option value="Tata">
-                        </datalist>
                     </div>
                     <div class="submit mt-5 d-flex justify-content-center"><input type="submit" class="btn btn-primary submitbtn" name="Search" value="search" /></div>
                 }
@@ -66,33 +47,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-    @* <address>
-            One Microsoft Way<br />
-            Redmond, WA 98052-6399<br />
-            <abbr title="Phone">P:</abbr>
-            425.555.0100
-        </address>
-
-        <address>
-            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-        </address>*@
 </main>
 <style>
     .Doctor-search {
         height: 45vw;
         width: 100%;
         margin: 2vw 0 5vw 0;
-        /*background-image: url("https://images.pexels.com/photos/7195369/pexels-photo-7195369.jpeg?auto=compress&cs=tinysrgb&w=600");*/
     }
 
     .content1 {
@@ -110,7 +70,7 @@
         z-index: 99;
     }
 
-    .form-control {
+    #Specialist, #Doctor_Name, #State, #City {
         padding: 1% 4%;
         border: none;
     }

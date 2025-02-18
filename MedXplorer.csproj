@@ -128,6 +128,7 @@
     <Compile Include="Models\DoctorInsertManager.cs" />
     <Compile Include="Models\DoctorInsertModel.cs" />
     <Compile Include="Models\DoctorSearchManager.cs" />
+    <Compile Include="Models\DropdownsManager.cs" />
     <Compile Include="Models\LoginManager.cs" />
     <Compile Include="Models\SignupManager.cs" />
     <Compile Include="Models\SignupModel.cs" />
@@ -167,6 +168,7 @@
     <Content Include="Content\images\female-doctor-1.webp" />
     <Content Include="Content\images\female-main-doctor.avif" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\dropdownAzax.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -201,6 +203,7 @@
     <Content Include="Views\Main\RegisterSuccessfully.cshtml" />
     <Content Include="Views\Main\RegisteredFail.cshtml" />
     <Content Include="Views\Shared\_Registeredsuccess.cshtml" />
+    <Content Include="Views\Admin\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

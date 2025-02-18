@@ -104,7 +104,11 @@ namespace MedXplorer.Controllers
         public ActionResult Search()
         {
             DoctorInsertModel doctorinsertModel = new DoctorInsertModel();
-            ViewResult vr = View("Find_doctor");
+            DropdownsManager dropdownManager = new DropdownsManager();
+            doctorinsertModel = dropdownManager.GetState(doctorinsertModel);
+            doctorinsertModel = dropdownManager.GetSpecialists(doctorinsertModel);
+            doctorinsertModel = dropdownManager.GetDoctorsName(doctorinsertModel);
+            ViewResult vr = View("Find_doctor", doctorinsertModel);
             ActionResult ar = vr;
             return ar;
         }
@@ -112,8 +116,13 @@ namespace MedXplorer.Controllers
         public ActionResult Search(DoctorInsertModel doctorinsertModel, string Search)
         {
             DoctorSearchManager Im = new DoctorSearchManager();
-            List<DoctorInsertModel> Take = Im.Search_Data(doctorinsertModel);
-            return View("DoctorResult", Take);
+            DropdownsManager dropdown = new DropdownsManager();
+            doctorinsertModel = dropdown.GetSpecialists(doctorinsertModel);  //Doctor Insert Model
+            doctorinsertModel = dropdown.GetDoctorsName(doctorinsertModel);  //Doctor Insert Model
+            doctorinsertModel = dropdown.GetState(doctorinsertModel);        //Doctor Insert Model
+            
+            doctorinsertModel.selectListItems = Im.Search_Data(doctorinsertModel);       //Doctor Insert Model but different manager
+            return View("DoctorResult", doctorinsertModel);
         }
     }
 }
